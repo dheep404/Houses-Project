@@ -28,10 +28,6 @@ function App() {
 
       </header>
 
-
-
-      {/* {houses.map(h => <Tile price={h.price} area={h.area} image={h.image} type={h.type} />)} */}
-
       {houses.map(
         h =>
           <Tile price={h.price} area={h.area} image={h.image} type={h.type} key={h.id} id={h.id} />
