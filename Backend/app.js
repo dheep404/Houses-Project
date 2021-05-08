@@ -1,3 +1,5 @@
+// *** Remember to restart the back-end to initialise changes ***
+
 "use strict";
 
 const express = require("express");
@@ -29,9 +31,13 @@ app.get("/houses", (req, res) => {
 app.post("/sms", (req, res) => {
 
     console.log(req.body)
-    let msg = `Hello we would like to make a booking for ${req.body.id} ${req.body.msg} on ${req.body.date} at ${req.body.time}    `
-    sendSMS(msg, req.body.tel)
-    sendSMS(msg, req.body.tel) //Finish to allow 2 mobiles to txt
+
+    let msg = `Hello ${req.body.name}, we would like to make a booking for the folowing property: ${req.body.id} on ${req.body.date}, at ${req.body.time}. Message: ${req.body.msg}`
+
+    sendSMS(msg, '07745625522') // Hardcoded Agent number (me)
+
+    let cusomerText = 'Thank you I will attend'
+    sendSMS(cusomerText, req.body.tel) //Customer number through form
 
 
     res.type('application/json')
