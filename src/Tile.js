@@ -5,20 +5,19 @@ function Tile(props) {
     const [view, setView] = useState(true);
     if (view) {
         return (
+
             <div className='tile'>
-                <h1>
-                    {props.area} {props.price} {props.type}
-                </h1>
-                <img alt='' src={props.image} />
+
+                <div class='property-info'>
+                    <h2>Location: {props.area}</h2>
+                    <h2>Type: {props.type}</h2>
+                    <h2>Price: £{props.price}</h2>
+                </div>
+                <img class='image' alt='' src={props.image} />
                 <Appointment id={props.id} />
-                <button
-                    onClick={() => {
-                        setView(false);
-                    }}
-                >
-                    Hide
-        </button>
+                <button onClick={() => { setView(false); }}>Hide</button>
             </div>
+
         );
     }
     return (
