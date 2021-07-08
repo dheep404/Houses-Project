@@ -7,11 +7,11 @@
   background-color: rgb(211, 210, 206);
 }
 
-/* .top-banner {
-  width: 100%;
-  height: 10%;
-  background-color: darkgray;
-} */
+.banner {
+  width: 10%;
+  height: 5%;
+  background-color: rgb(20, 20, 20);
+} 
 
 
 .property-info {
@@ -36,3 +36,8 @@
   width: 400px;
   height: 250px;
 }
+
+.button {
+  margin-top: 10px;
+}
+

@@ -1,3 +1,7 @@
+//node app.js to run back (In this folder)//
+
+//npm start to run react (cd Backend)//
+
 // *** Remember to restart the front & back-end to initialise changes ***
 
 "use strict";

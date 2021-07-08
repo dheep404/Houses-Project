@@ -8,6 +8,8 @@ function Tile(props) {
 
             <div className='tile'>
 
+                <div class="banner"></div>
+
                 <div class='property-info'>
                     <h2>Location: {props.area}</h2>
                     <h2>Type: {props.type}</h2>
@@ -15,7 +17,7 @@ function Tile(props) {
                 </div>
                 <img class='image' alt='' src={props.image} />
                 <Appointment id={props.id} />
-                <button onClick={() => { setView(false); }}>Hide</button>
+                <button class='button' onClick={() => { setView(false); }}>Hide</button>
             </div>
 
         );
